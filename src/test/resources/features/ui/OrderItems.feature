@@ -20,7 +20,7 @@ Feature: Add items to cart and order items functionality
     When I click on finish button
     Then I should complete checkout
 
-  Scenario: checkout without adding any items
+  Scenario: Checkout without adding any items
     When I navigate to cart page
     And I click on checkout button
     Then I should not be able to check out
