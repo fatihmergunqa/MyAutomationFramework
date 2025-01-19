@@ -19,7 +19,6 @@ public class API {
 
     // Static block for initializing the BASE_URI
     static {
-        Configs.readProperties(Constants.CONFIGURATION_FILEPATH);
         BASE_URI = Configs.getProperty("api_uri");
     }
 
