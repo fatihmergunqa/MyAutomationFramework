@@ -2,7 +2,6 @@ package gmail.fatihmergunqa.steps.ui;
 
 import gmail.fatihmergunqa.utils.Commons;
 import gmail.fatihmergunqa.utils.Configs;
-import gmail.fatihmergunqa.utils.Constants;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -24,8 +23,6 @@ public class Login extends Commons {
 
     @When("I enter username and password")
     public void iEnterUsernameAndPassword() {
-        Configs.readProperties(Constants.CONFIGURATION_FILEPATH);
-
         String username = Configs.getProperty("username");
         String password = Configs.getProperty("password");
 

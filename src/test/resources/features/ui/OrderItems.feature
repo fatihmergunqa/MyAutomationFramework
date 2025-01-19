@@ -1,7 +1,7 @@
 @Smoke
 Feature: Add items to cart and order items functionality
 
-  Background:
+  Background: Navigate to the inventory page
     Given I am on the login page
     When I enter username and password
     And I click on login button
@@ -19,3 +19,8 @@ Feature: Add items to cart and order items functionality
     Then I should see order details
     When I click on finish button
     Then I should complete checkout
+
+  Scenario: checkout without adding any items
+    When I navigate to cart page
+    And I click on checkout button
+    Then I should not be able to check out

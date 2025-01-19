@@ -121,4 +121,9 @@ public class OrderItems extends Commons {
     public void iShouldCompleteCheckout() {
         Assert.assertEquals("https://www.saucedemo.com/checkout-complete.html", driver.getCurrentUrl());
     }
+
+    @Then("I should not be able to check out")
+    public void iShouldNotBeAbleToCheckOut() {
+        Assert.assertNotEquals("https://www.saucedemo.com/checkout-step-one.html", driver.getCurrentUrl());
+    }
 }
