@@ -51,6 +51,5 @@ public class Login extends Commons {
     public void iShouldnTBeAbleToLogin() {
         Assert.assertTrue(loginPageElements.errorMessage.isDisplayed());
         Assert.assertEquals("https://www.saucedemo.com/", driver.getCurrentUrl());
-        Assert.assertNotEquals("https://www.saucedemo.com/inventory/", driver.getCurrentUrl());
     }
 }
