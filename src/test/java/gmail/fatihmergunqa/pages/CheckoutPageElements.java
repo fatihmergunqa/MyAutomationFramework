@@ -15,6 +15,9 @@ public class CheckoutPageElements extends Base {
     @FindBy(id = "postal-code")
     public WebElement zipCodeField;
 
+    @FindBy(xpath = "//h3[@data-test='error']")
+    public WebElement errorMessage;
+
     @FindBy(id = "continue")
     public WebElement continueButton;
 

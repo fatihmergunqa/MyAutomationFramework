@@ -97,6 +97,12 @@ public class OrderItems extends Commons {
         click(checkoutPageElements.continueButton);
     }
 
+    @Then("I should not be able to continue")
+    public void iShouldNotBeAbleToContinue() {
+        Assert.assertTrue(checkoutPageElements.errorMessage.isDisplayed());
+        Assert.assertEquals("https://www.saucedemo.com/checkout-step-one.html", driver.getCurrentUrl());
+    }
+
     @Then("I should see order details")
     public void iShouldSeeOrderDetails() {
         Assert.assertEquals("https://www.saucedemo.com/checkout-step-two.html", driver.getCurrentUrl());

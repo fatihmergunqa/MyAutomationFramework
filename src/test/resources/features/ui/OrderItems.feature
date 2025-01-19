@@ -20,6 +20,16 @@ Feature: Add items to cart and order items functionality
     When I click on finish button
     Then I should complete checkout
 
+  Scenario: Add all items to cart and do not fill out the form when checking out
+    When I add all items to cart
+    And I navigate to cart page
+    Given I am on the cart page
+    Then I should see all items
+    When I click on checkout button
+    Then I should be on the checkout page
+    And I click on continue button
+    Then I should not be able to continue
+
   Scenario: Checkout without adding any items
     When I navigate to cart page
     And I click on checkout button
