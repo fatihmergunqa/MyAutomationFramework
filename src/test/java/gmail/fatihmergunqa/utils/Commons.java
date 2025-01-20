@@ -1,6 +1,6 @@
 package gmail.fatihmergunqa.utils;
 
-import gmail.fatihmergunqa.testbase.PageInitializer;
+import gmail.fatihmergunqa.testbase.API;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -20,7 +20,7 @@ import java.util.List;
  * Provides methods for interacting with elements, handling alerts, and working with JavaScriptExecutor.
  * It extends the PageInitializer class to inherit WebDriver setup, teardown functionality and, Page Element objects.
  */
-public class Commons extends PageInitializer {
+public class Commons extends API {
     /**
      * Sends text to a specified WebElement after clearing it.
      *
