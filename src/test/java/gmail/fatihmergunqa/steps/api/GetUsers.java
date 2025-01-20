@@ -13,7 +13,7 @@ import org.junit.Assert;
 public class GetUsers extends Commons {
     @Given("I created a request")
     public void iCreatedARequest() {
-        RestAssured.baseURI = API.BASE_URI;
+        RestAssured.baseURI = BASE_URI;
         request = RestAssured.given();
     }
 
