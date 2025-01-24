@@ -4,7 +4,6 @@ import gmail.fatihmergunqa.utils.Commons;
 import gmail.fatihmergunqa.utils.Configs;
 import gmail.fatihmergunqa.utils.Constants;
 import io.cucumber.java.en.And;
-import org.hamcrest.Matchers;
 
 public class RegisterAndLogin extends Commons {
     @And("I update framework token")
@@ -16,10 +15,5 @@ public class RegisterAndLogin extends Commons {
                 "api_token",
                 token
         );
-    }
-
-    @And("I validate that response body contains {string}")
-    public void iValidateThatResponseBodyContains(String path) {
-        response.then().assertThat().body(path, Matchers.notNullValue());
     }
 }

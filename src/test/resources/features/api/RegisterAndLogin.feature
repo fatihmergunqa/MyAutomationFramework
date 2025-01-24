@@ -16,7 +16,7 @@ Feature: Register and login functionality
     And I make POST request to the "POST_REGISTER" endpoint
     And I validate that the status code is 200
     And I validate that response body "id" value is 4
-    And I validate that response body contains "token"
+    And I validate that response body "token" value is "QpwL5tke4Pnpja7X4"
     And I update framework token
 
   Scenario: Unsuccessful registration
@@ -40,7 +40,7 @@ Feature: Register and login functionality
     """
     And I make POST request to the "POST_LOGIN" endpoint
     And I validate that the status code is 200
-    And I validate that response body contains "token"
+    And I validate that response body "token" value is "QpwL5tke4Pnpja7X4"
     And I update framework token
 
   Scenario: Unsuccessful login
