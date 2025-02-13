@@ -59,5 +59,12 @@ public class API extends PageInitializer {
         BASE_URI = Configs.getProperty("api_uri");
 
         // Define API endpoint paths
+        endpoints.put("GET_LIST_USERS", "/api/users/");
+        endpoints.put("GET_SINGLE_USER", "/api/users/{id}");
+        endpoints.put("POST_CREATE_USER", "/api/users/");
+        endpoints.put("PUT_UPDATE_USER", "/api/users/2");
+        endpoints.put("DELETE_USER", "/api/users/2");
+        endpoints.put("POST_REGISTER", "/api/register/");
+        endpoints.put("POST_LOGIN", "/api/login/");
     }
 }
